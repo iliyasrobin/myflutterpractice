@@ -46,6 +46,11 @@ class Home extends StatelessWidget {
                ),
              ),
            ),
+
+            //using divider
+            Divider(),
+            //using divider
+
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextField(
@@ -58,6 +63,13 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+
+
+            //using divider
+            Divider(),
+            //using divider
+
+
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextField(
@@ -70,10 +82,18 @@ class Home extends StatelessWidget {
               ),
 
             ),
+
+
+            //using divider
+            Divider(),
+            //using divider
+
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(8),
-                child: ElevatedButton(onPressed: (){}, child: Text("Submit"),
+                child: ElevatedButton(onPressed: (){
+                  print("Submit button pressed");
+                }, child: Text("Submit"),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
