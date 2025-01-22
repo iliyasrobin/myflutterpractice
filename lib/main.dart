@@ -20,6 +20,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController _nameController = TextEditingController();
+    TextEditingController _numberController = TextEditingController();
+    TextEditingController _emailController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -28,17 +31,81 @@ class Home extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Center(
-            child: Text("This is homepage"),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: TextField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                hintText: "Enter your name",
+                helperText: "Please enter your name",
+                prefix: Text("Name: "),
+// suffix: Text("@gmail.com"),
+                label: Text("Enter your name:"),
+// filled: false,
+// fillColor: Colors.green,
+              ),
+            ),
           ),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Page2()));
-          }, child: Text("Goto Page 2")),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Page3()));
-          }, child: Text("Goto Page 3")),
+
+//using divider
+          Divider(),
+//using divider
+
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: TextField(
+              controller: _numberController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                hintText: "Enter your Number",
+                helperText: "Please enter your number",
+                prefix: Text("+880"),
+                label: Text("Enter your number:"),
+              ),
+            ),
+          ),
+
+
+//using divider
+          Divider(),
+//using divider
+
+
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: TextField(
+              controller: _emailController,
+              decoration: InputDecoration(
+                hintText: "Enter your email",
+                helperText: "Please enter your name",
+                label: Text("Enter your email:"),
+                suffix: Text("@gmail.com"),
+              ),
+            ),
+
+          ),
+
+
+//using divider
+          Divider(),
+//using divider
+
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: ElevatedButton(onPressed: (){
+                print("Submit button pressed");
+              }, child: Text("Submit"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+
+                  )),
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -53,79 +120,7 @@ class Home extends StatelessWidget {
   }
 }
 
-class Page2 extends StatelessWidget {
-  const Page2({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("My App"),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text("This is page 2"),
-          ),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
-          }, child: Text("Goto Page Home")),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Page3()));
-          }, child: Text("Goto Page 3")),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("floating button pressed");
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.red,
-        foregroundColor: Colors.white,
-      ),
-    );;
-  }
-}
 
-class Page3 extends StatelessWidget {
-  const Page3({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("My App"),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text("This is page 3"),
-          ),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
-          }, child: Text("Goto Home Page ")),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Page2()));
-          }, child: Text("Goto Page 2")),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("floating button pressed");
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.red,
-        foregroundColor: Colors.white,
-      ),
-    );;
-  }
-}
 
