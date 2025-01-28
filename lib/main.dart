@@ -1,5 +1,3 @@
-//Button + Icon
-
 import 'package:flutter/material.dart';
 
 
@@ -30,28 +28,51 @@ class Home extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                ),
-                onPressed: (){
-                  print("Button Pressed");
-            }, child: Row(
-              children: [
-                Text("Button",
-                  style: TextStyle(color: Colors.white, fontSize: 20),),
-                Icon(Icons.check_box),
-              ],
-            ),),
-          ),
-          Icon(Icons.add, size: 30,color: Colors.green,),
-          Icon(Icons.read_more, size: 30, color: Colors.green,)
+  body: GestureDetector(
+    onTap: (){
+      print("from on tap");
+    },
+    onDoubleTap: (){
+      print("Double tapped");
+    },
+    child: Container(
+      height: 300,
+      width: 300,
+     // color: Colors.green,
+      margin: EdgeInsets.only(top: 50),
+      padding: EdgeInsets.all(30),
+      alignment: Alignment.center,
+
+      decoration: BoxDecoration(
+        color: Colors.green,
+        borderRadius: BorderRadius.circular(50),
+        border: Border.all(
+          color: Colors.lightBlue,
+          width: 20,
+        ),
+
+        boxShadow: [
+          BoxShadow(
+            color: Colors.yellow,
+            offset: Offset(5,5),
+            blurRadius: 5,
+            spreadRadius: 2,
+          )
         ],
+
+        gradient: LinearGradient(colors: [Colors.red.shade200,Colors.green,Colors.yellow,Colors.lightGreen],
+        begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+
+        ),
+
       ),
+      child: Text("I am a Container",style: TextStyle(
+        color: Colors.white.withOpacity(0.6),
+      ),),
+
+    ),
+  ),
 
     );
   }
