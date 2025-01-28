@@ -1,9 +1,11 @@
+//Button + Icon
+
 import 'package:flutter/material.dart';
+
 
 void main(){
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,46 +13,50 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeActivity(),
+      home: Home(),
     );
   }
 }
 
-class HomeActivity extends StatelessWidget {
-  const HomeActivity({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My App", style: TextStyle(
-            fontSize: 40,
-            backgroundColor: Colors.blue,
-            color: Colors.white
-        ),
-        ),
-        foregroundColor: Colors.white,
+        title: Text("MyApp"),
         backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
         centerTitle: true,
-
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Hello World"),
-            Text("Hello World"),
-            Text("Hello World"),
-            Text("Hello World"),
-            Text("Hello World"),
-
-
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                ),
+                onPressed: (){
+                  print("Button Pressed");
+            }, child: Row(
+              children: [
+                Text("Button",
+                  style: TextStyle(color: Colors.white, fontSize: 20),),
+                Icon(Icons.check_box),
+              ],
+            ),),
+          ),
+          Icon(Icons.add, size: 30,color: Colors.green,),
+          Icon(Icons.read_more, size: 30, color: Colors.green,)
+        ],
       ),
+
     );
   }
 }
+
 
 
 
