@@ -68,7 +68,7 @@ class Home extends StatelessWidget {
 
       ),
       child: Text("I am a Container",style: TextStyle(
-        color: Colors.white.withOpacity(0.6),
+        color: Colors.white//.withOpacity(0.6),
       ),),
 
     ),
