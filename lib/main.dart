@@ -28,50 +28,150 @@ class Home extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
-  body: GestureDetector(
-    onTap: (){
-      print("from on tap");
-    },
-    onDoubleTap: (){
-      print("Double tapped");
-    },
-    child: Container(
-      height: 300,
-      width: 300,
-     // color: Colors.green,
-      margin: EdgeInsets.only(top: 50),
-      padding: EdgeInsets.all(30),
-      alignment: Alignment.center,
+  body: Column(
+   children: [
+     Padding(
+       padding: const EdgeInsets.all(15),
+       child: TextField(
+         decoration: InputDecoration(
+           filled: true,
+           fillColor: Colors.yellow,
 
-      decoration: BoxDecoration(
-        color: Colors.green,
-        borderRadius: BorderRadius.circular(50),
-        border: Border.all(
-          color: Colors.lightBlue,
-          width: 20,
-        ),
+           hintText: "your email ",
+           hintStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           hintMaxLines: 2,
+           labelText: "Email",
+           labelStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           helperText: "please enter your email",
+           helperStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           helperMaxLines: 2,
+           // prefixText: "Email: ",
+           // suffixText: "@gmail.com",
+           prefixIcon: Icon(Icons.email),
+           suffixIcon: Icon(Icons.send),
+           //border: InputBorder.none,
+            border: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red,width: 5),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(15),
+                bottomRight: Radius.circular(15),
+              ),
+            ),
+           enabledBorder: OutlineInputBorder(
+             borderSide: BorderSide(color: Colors.red,width: 5),
+             borderRadius: BorderRadius.only(
+               topLeft: Radius.circular(15),
+               bottomRight: Radius.circular(15),
+             ),
+           ),
+         ),
+       ),
+     ),
+     Padding(
+       padding: const EdgeInsets.all(15),
+       child: TextField(
+         obscureText: true,
+         decoration: InputDecoration(
+           filled: true,
+           fillColor: Colors.yellow,
+           hintText: "your password ",
+           hintStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           hintMaxLines: 2,
+           labelText: "Password",
+           labelStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           helperText: "please enter your password",
+           helperStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           helperMaxLines: 2,
+           // prefixText: "Email: ",
+           // suffixText: "@gmail.com",
+           prefixIcon: Icon(Icons.password),
+           suffixIcon: Icon(Icons.private_connectivity),
+           //border: InputBorder.none,
+           border: OutlineInputBorder(
+             borderSide: BorderSide(color: Colors.red,width: 5),
+             borderRadius: BorderRadius.only(
+               topLeft: Radius.circular(15),
+               bottomRight: Radius.circular(15),
+             ),
+           ),
+           enabledBorder: OutlineInputBorder(
+             borderSide: BorderSide(color: Colors.red,width: 5),
+             borderRadius: BorderRadius.only(
+               topLeft: Radius.circular(15),
+               bottomRight: Radius.circular(15),
+             ),
+           ),
+         ),
+       ),
+     ),
+     Padding(
+       padding: const EdgeInsets.all(15),
+       child: TextField(
+         keyboardType: TextInputType.number,
+         decoration: InputDecoration(
+           filled: true,
+           fillColor: Colors.yellow,
+           hintText: "your number ",
+           hintStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           hintMaxLines: 2,
+           labelText: "number",
+           labelStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           helperText: "please enter your number",
+           helperStyle: TextStyle(
+             fontSize: 25,
+             color: Colors.red,
+           ),
+           helperMaxLines: 2,
+           // prefixText: "Email: ",
+           // suffixText: "@gmail.com",
+           prefixIcon: Icon(Icons.phone),
+           suffixIcon: Icon(Icons.numbers),
+           //border: InputBorder.none,
+           border: OutlineInputBorder(
+             borderSide: BorderSide(color: Colors.red,width: 5),
+             borderRadius: BorderRadius.only(
+               topLeft: Radius.circular(15),
+               bottomRight: Radius.circular(15),
+             ),
+           ),
+           enabledBorder: OutlineInputBorder(
+             borderSide: BorderSide(color: Colors.red,width: 5),
+             borderRadius: BorderRadius.only(
+               topLeft: Radius.circular(15),
+               bottomRight: Radius.circular(15),
+             ),
+           ),
+         ),
+       ),
+     ),
 
-        boxShadow: [
-          BoxShadow(
-            color: Colors.yellow,
-            offset: Offset(5,5),
-            blurRadius: 5,
-            spreadRadius: 2,
-          )
-        ],
 
-        gradient: LinearGradient(colors: [Colors.red.shade200,Colors.green,Colors.yellow,Colors.lightGreen],
-        begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
 
-        ),
-
-      ),
-      child: Text("I am a Container",style: TextStyle(
-        color: Colors.white//.withOpacity(0.6),
-      ),),
-
-    ),
+   ],
   ),
 
     );
