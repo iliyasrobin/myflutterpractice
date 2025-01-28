@@ -36,6 +36,7 @@ class HomeActivity extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Hello World"),
             Text("Hello World"),

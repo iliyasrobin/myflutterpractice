@@ -35,7 +35,18 @@
 //
 //       ),
 //       body: Center(
-//         child: Text("Hello World"),
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text("Hello World"),
+//             Text("Hello World"),
+//             Text("Hello World"),
+//             Text("Hello World"),
+//             Text("Hello World"),
+//
+//
+//           ],
+//         ),
 //       ),
 //     );
 //   }
@@ -43,7 +54,3 @@
 //
 //
 //
-
-//updating
-//Column
-//Row
