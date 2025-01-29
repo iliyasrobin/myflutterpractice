@@ -17,7 +17,7 @@
 //             child: Text("This is homepage"),
 //           ),
 //           ElevatedButton(onPressed: (){
-//             Navigator.push(context, MaterialPageRoute(builder: (context)=>Page2()));
+//             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Page2()));
 //           }, child: Text("Goto Page 2")),
 //           ElevatedButton(onPressed: (){
 //             Navigator.push(context, MaterialPageRoute(builder: (context)=>Page3()));
