@@ -21,6 +21,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController _emailController = TextEditingController();
+    TextEditingController _passwordlController = TextEditingController();
+    TextEditingController _numberController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: Text("MyApp"),
@@ -33,6 +36,7 @@ class Home extends StatelessWidget {
      Padding(
        padding: const EdgeInsets.all(15),
        child: TextField(
+         controller: _emailController,
          decoration: InputDecoration(
            filled: true,
            fillColor: Colors.yellow,
@@ -79,6 +83,7 @@ class Home extends StatelessWidget {
      Padding(
        padding: const EdgeInsets.all(15),
        child: TextField(
+         controller: _passwordlController,
          obscureText: true,
          decoration: InputDecoration(
            filled: true,
@@ -125,6 +130,7 @@ class Home extends StatelessWidget {
      Padding(
        padding: const EdgeInsets.all(15),
        child: TextField(
+         controller: _numberController,
          keyboardType: TextInputType.number,
          decoration: InputDecoration(
            filled: true,
@@ -168,6 +174,34 @@ class Home extends StatelessWidget {
          ),
        ),
      ),
+
+
+     Row(
+       children: [
+         ElevatedButton(
+             style: ElevatedButton.styleFrom(
+               backgroundColor: Colors.blue,
+               foregroundColor: Colors.white,
+               shape: RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(15),
+               ),
+             ),
+
+             onPressed: (){
+               _passwordlController.text.length > 6 ? print("password strong") : print("password is weak");
+               print(_emailController.text);
+               print(_passwordlController.text);
+               print(_numberController.text);
+             }, child: Text("Submit")),
+         ElevatedButton(onPressed: (){
+           _numberController.clear();
+           _passwordlController.clear();
+           _emailController.clear();
+         }, child: Text("Clear")),
+       ],
+     ),
+
+
 
 
 
