@@ -28,21 +28,33 @@ class Home extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
-  body: Column(
-    children: [
-      ListTile(
-        title: Text("ILIYAS AHMED"),
-        subtitle: Text("BSc. in CSE"),
-        leading: Icon(Icons.account_circle,size: 40,),
-        trailing: Icon(Icons.send, size: 40,),
-        onTap: (){
-          print("I am List Tile");
-        },
-        onLongPress: (){
-          print("I am ListTile Long Press");
-        },
-      ),
-    ],
+  body: SingleChildScrollView(
+    child: Column(
+      children: [
+        SizedBox(
+          height: 900,
+          width: double.infinity,
+          child: ListView.builder(
+            itemCount: 100,
+            itemBuilder: (context, index){
+              return  ListTile(
+                title: Text("ILIYAS AHMED ${index+1}"),
+                subtitle: Text("BSc. in CSE"),
+                leading: Icon(Icons.account_circle,size: 40,),
+                trailing: Icon(Icons.send, size: 40,),
+                onTap: (){
+                  print("I am List Tile");
+                },
+                onLongPress: (){
+                  print("I am ListTile Long Press");
+                },
+              );
+            },
+          ),
+        ),
+    
+      ],
+    ),
   ),
 
     );
