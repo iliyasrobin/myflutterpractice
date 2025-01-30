@@ -11,22 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
-
-      theme: ThemeData(
-        primaryColor: Colors.red,
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.red,
-          centerTitle: true,
-          foregroundColor: Colors.white,
-        ),
-        scaffoldBackgroundColor: Colors.lightGreen,
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green,
-            foregroundColor: Colors.white,
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -36,13 +21,38 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        title: Text("MyApp"),
+        title: Text("My App"),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        centerTitle: true,
       ),
-      body: Center(
-        child: ElevatedButton(onPressed: (){}, child: Text("Hello")),
+      body: SizedBox(
+        height: 500,
+        child: GridView.builder(
+            gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                crossAxisSpacing: 50,
+                mainAxisSpacing: 30),
+            itemCount: 10,
+            itemBuilder: (context,index){
+              return Container(
+
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                    child: Text("Item ${index+1}",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                  )
+              );
+            }),
       ),
     );
   }
