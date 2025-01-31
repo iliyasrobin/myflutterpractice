@@ -28,32 +28,78 @@ class Home extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
-      body: SizedBox(
-        height: 500,
-        child: GridView.builder(
-            gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                crossAxisSpacing: 50,
-                mainAxisSpacing: 30),
-            itemCount: 10,
-            itemBuilder: (context,index){
-              return Container(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              decoration: InputDecoration(
+                hintText: "Enter your email",
+                labelText: "Email",
+                helperText: "Please enter your email",
+                prefix: Icon(Icons.email),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                hintText: "Enter your password",
+                labelText: "Password",
+                helperText: "Please enter your password",
+                prefix: Icon(Icons.password),
+              ),
+            ),
+          ),
+          //Button
+          SizedBox(
+            height: 40,
+            width: double.infinity,
+            child: ElevatedButton(
 
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Center(
-                    child: Text("Item ${index+1}",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                  )
-              );
-            }),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  foregroundColor: Colors.white
+                ),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Page2(name: "Iliyas",)));
+                }, child: Text("Submit", style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),)),
+          ),
+
+        ],
       ),
     );
   }
 }
+
+
+class Page2 extends StatelessWidget {
+  final String name;
+  const Page2({super.key, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Page 2"),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+        Text(name),
+        IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.backspace))
+        ],
+      ),
+    );
+  }
+}
+
