@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mypractice/mediaQuery.dart';
+import 'package:mypractice/wrapWidget.dart';
 
 import 'Home.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: mediaQuery(),
+      home: wrapWidget(),
     );
   }
 }
