@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mypractice/Expanded.dart';
-import 'package:mypractice/FractionallySizedBox.dart';
+// import 'package:mypractice/Expanded.dart';
+// import 'package:mypractice/FractionallySizedBox.dart';
+import 'package:mypractice/Stack.dart';
 // import 'package:mypractice/GridViewCount.dart';
 // import 'package:mypractice/LayoutBuilder.dart';
 // import 'package:mypractice/aspect-ratio.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: expandedex(),
+      home:stackEx(),
     );
   }
 }
