@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mypractice/GridViewCount.dart';
+import 'package:mypractice/LayoutBuilder.dart';
 import 'package:mypractice/mediaQuery.dart';
 import 'package:mypractice/wrapWidget.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: GCount(),
+      home: Layoutbuilderex(),
     );
   }
 }
