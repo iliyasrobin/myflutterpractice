@@ -21,6 +21,7 @@ class FractionallySizedBoxEX extends StatelessWidget {
             //Parent widget er upor depend kore
             widthFactor: 1,
             heightFactor: 0.5,
+            alignment: Alignment.bottomRight,
             child: Container(
               color: Colors.red,
               child: Text("Hello World! ", style: TextStyle(color: Colors.white),),
