@@ -40,11 +40,18 @@ class GCount extends StatelessWidget {
                 crossAxisSpacing: 10,
                 crossAxisCount: 3,
                 children: List.generate(
-                    15,
-                    (index) => Chip(
-                          label: Text("Item ${index}"),
-                          backgroundColor: Colors.blue,
-                        )),
+                  15,
+                  (index) => Container(
+                    color: Colors.green,
+                    child: Center(child: Text("Item ${index}", style: TextStyle(
+                      color: Colors.white,
+                    ),)),
+                  ),
+                  // (index) => Chip(
+                  //       label: Text("Item ${index}"),
+                  //       backgroundColor: Colors.blue,
+                  //     )
+                ),
               ),
             ),
           ],
