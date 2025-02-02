@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mypractice/SizerEx.dart';
 import 'package:mypractice/image.dart';
+import 'package:sizer/sizer.dart';
 import 'package:mypractice/template.dart';
 // import 'package:mypractice/Expanded.dart';
 // import 'package:mypractice/FractionallySizedBox.dart';
@@ -18,8 +20,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:img(),
+    return Sizer(
+      builder: (BuildContext , Orientation , ScreenType ) {
+        return  MaterialApp(
+          home:Sizerex(),
+        );
+      },
+
     );
   }
 }
