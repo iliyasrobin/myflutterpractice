@@ -25,6 +25,8 @@ class Sizerex extends StatelessWidget {
           ),
           Text("Hello world! ", style: TextStyle(
             fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            color: Colors.green,
           ),)
         ],
       ),
