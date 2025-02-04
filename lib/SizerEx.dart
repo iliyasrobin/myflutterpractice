@@ -27,6 +27,7 @@ class Sizerex extends StatelessWidget {
             fontSize: 20.sp,
             fontWeight: FontWeight.bold,
             color: Colors.green,
+
           ),)
         ],
       ),
