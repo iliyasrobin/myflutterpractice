@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mypractice/snackbar.dart';
+import 'package:mypractice/bottomSheet.dart';
 import 'Home.dart';
 
 
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: snackBarex(),
+      home: bottomSheetEx(),
     );
   }
 }
