@@ -18,6 +18,9 @@ class snackBarex extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text("Hi there!"),
                   duration: Duration(seconds: 5),
+                  action: SnackBarAction(label: "UNDO", onPressed: (){
+                    print("Some Work");
+                  }),
               ),
               );
             },
