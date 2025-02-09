@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mypractice/bottomSheet.dart';
 import 'Home.dart';
+import 'alertDialogue.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: bottomSheetEx(),
+      home: alertEX(),
     );
   }
 }
