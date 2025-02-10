@@ -5,4 +5,5 @@ import 'Home.dart';
 
 void main(){
   runApp(MyApp());
+  //app will run from here
 }
