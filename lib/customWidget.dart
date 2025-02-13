@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'cityWiget.dart';
+
 class customWidget extends StatelessWidget {
   const customWidget({super.key});
 
@@ -12,6 +14,15 @@ class customWidget extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          cityWidget(),
+        ],
+      ),
     );
   }
 }
+
+
