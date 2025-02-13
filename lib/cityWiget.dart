@@ -7,13 +7,15 @@ class cityWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text("Top Cities"),
-        Image.asset('asset/images.png'),
-        Text("London"),
+    return Container(
+      color: Colors.grey,
+      child: Column(
+        children: [
+          Image.asset('asset/images.png'),
+          Text("London"),
 
-      ],
+        ],
+      ),
     );
   }
 }

@@ -14,12 +14,20 @@ class customWidget extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          cityWidget(),
-        ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            cityWidget(),
+            SizedBox(height: 15,),
+            cityWidget(),
+            cityWidget(),
+            SizedBox(height: 15,),
+            cityWidget(),
+          ],
+        ),
       ),
     );
   }
