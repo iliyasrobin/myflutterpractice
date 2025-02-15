@@ -8,6 +8,7 @@ class customWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Text("MyApp"),
         backgroundColor: Colors.blue,
@@ -19,13 +20,15 @@ class customWidget extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(height: 15,),
-            cityWidget(),
+            cityWidget(cityImage: 'asset/images.png', cityName: 'Singapore', cityDescription: 'ABCD',),
             SizedBox(height: 15,),
-            cityWidget(),
-            cityWidget(),
+            cityWidget(cityImage: 'asset/images.png', cityName: 'Singapore', cityDescription: 'ABCD',),
             SizedBox(height: 15,),
-            cityWidget(),
-            cityWidget(),
+            cityWidget(cityImage: 'asset/images.png', cityName: 'Singapore', cityDescription: 'ABCD',),
+            SizedBox(height: 15,),
+            cityWidget(cityImage: 'asset/images.png', cityName: 'Singapore', cityDescription: 'ABCD',),
+            SizedBox(height: 15,),
+            cityWidget(cityImage: 'asset/images.png', cityName: 'Singapore', cityDescription: 'ABCD',),
           ],
         ),
       ),
