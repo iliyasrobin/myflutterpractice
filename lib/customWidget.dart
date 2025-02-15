@@ -25,6 +25,7 @@ class customWidget extends StatelessWidget {
             cityWidget(),
             SizedBox(height: 15,),
             cityWidget(),
+            cityWidget(),
           ],
         ),
       ),
