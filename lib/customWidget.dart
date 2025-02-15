@@ -17,9 +17,8 @@ class customWidget extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 15,),
             cityWidget(),
             SizedBox(height: 15,),
             cityWidget(),

@@ -3,18 +3,21 @@ import 'package:mypractice/bottomSheet.dart';
 import 'package:mypractice/customWidget.dart';
 import 'Home.dart';
 import 'alertDialogue.dart';
-
+import 'package:sizer/sizer.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      //screen name
-      home: customWidget(),
+    return Sizer(
+      builder: (context, orientation, screenType) {
+        return MaterialApp(
+          //screen name
+          home: customWidget(),
+        );
+      }
     );
   }
 }
 
-//updating
