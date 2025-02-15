@@ -18,6 +18,8 @@ class customWidget extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 15,),
             cityWidget(cityImage: 'asset/images.png', cityName: 'Singapore', cityDescription: 'ABCD',),

@@ -10,7 +10,7 @@ class cityWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30.h,
+      height: 35.h,
       width: 53.w,
       decoration: BoxDecoration(
         color: Colors.green,
@@ -22,7 +22,8 @@ class cityWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(cityImage),
-          Text(cityName),
+          SizedBox(height: 15,),
+          Text(cityName,style: TextStyle(fontSize: cityName == "Singapore" ? 20 : 25),),
           SizedBox(height: 15,),
           Text(cityDescription),
 
