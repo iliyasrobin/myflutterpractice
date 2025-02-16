@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MaterialApp(
           //screen name
-          home: waterTrackerApp(),
+          home: WaterTracker(),
         );
       }
     );
