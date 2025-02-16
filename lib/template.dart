@@ -23,11 +23,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("MyApp"),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-        centerTitle: true,
-      ),
+      title: Text("MyApp"),
+      backgroundColor: Colors.blue,
+      foregroundColor: Colors.white,
+      centerTitle: true,
+    ),
     );
   }
 }
