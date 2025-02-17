@@ -7,6 +7,7 @@ import 'Home.dart';
 import 'alertDialogue.dart';
 import 'package:sizer/sizer.dart';
 
+import 'expenseTracker.dart';
 import 'initState.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MaterialApp(
           //screen name
-          home: WaterTracker(),
+          home: expenseTracker(),
         );
       }
     );
