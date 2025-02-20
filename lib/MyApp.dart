@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MaterialApp(
           theme: ThemeData(
-            brightness: Brightness.dark,
+          //  brightness: Brightness.dark,
+            brightness: Brightness.light,
           ),
           //screen name
           home: expenseTracker(),
