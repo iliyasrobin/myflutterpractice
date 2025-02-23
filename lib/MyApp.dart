@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.light,
           ),
           //screen name
-          home: TODOAdv(),
+          home: TodoScreen(),
         );
       }
     );
