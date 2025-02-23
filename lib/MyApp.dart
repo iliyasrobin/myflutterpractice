@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mypractice/bottomSheet.dart';
-import 'package:mypractice/customWidget.dart';
-import 'package:mypractice/sumApp.dart';
-import 'package:mypractice/waterTrackerApp.dart';
-import 'Home.dart';
-import 'alertDialogue.dart';
 import 'package:sizer/sizer.dart';
 
-import 'expenseTracker.dart';
-import 'initState.dart';
+import 'TODO Advanced.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,7 +16,7 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.light,
           ),
           //screen name
-          home: expenseTracker(),
+          home: TODOAdv(),
         );
       }
     );
