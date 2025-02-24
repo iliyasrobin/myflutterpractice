@@ -29,7 +29,7 @@ class _TodoScreenState extends State<TodoScreen> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('Cancle')),
+                child: Text('Cancel')),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(shape: StadiumBorder()),
                 onPressed: (){
