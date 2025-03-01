@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mypractice/api_1.dart';
 import 'package:sizer/sizer.dart';
 
 import 'TODO Advanced.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.light,
           ),
           //screen name
-          home: TodoScreen(),
+          home: api1(),
         );
       }
     );
