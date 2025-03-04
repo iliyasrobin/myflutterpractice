@@ -58,6 +58,8 @@ class ProductController {
     }
   }
 
+
+  //delete
   Future<bool> deleteProducts(String id) async {
     final response = await http.get(Uri.parse(Urls.deleteProduct(id)));
 
