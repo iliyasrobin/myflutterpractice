@@ -1,3 +1,5 @@
+//generated from website
+
 class productModel {
   String? status;
   List<Data>? data;
