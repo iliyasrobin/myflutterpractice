@@ -8,6 +8,8 @@ import 'package:mypractice/model/product.dart';
 class ProductController {
   List<Data> products = [];
 
+
+  //api calling
   Future<void> fetchProducts() async {
     final response = await http.get(Uri.parse(Urls.readProduct));
 
@@ -58,6 +60,8 @@ class ProductController {
     }
   }
 
+
+  //delete
   Future<bool> deleteProducts(String id) async {
     final response = await http.get(Uri.parse(Urls.deleteProduct(id)));
 

@@ -119,6 +119,7 @@ class _Module13Class1State extends State<Module13Class1> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    //calling in init state
     fetchData();
   }
 
@@ -165,7 +166,7 @@ class _Module13Class1State extends State<Module13Class1> {
                 }else{
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text("Something wrong try again"),
+                      content: Text("Something went wrong try again"),
                       duration: Duration(seconds: 2),
 
                     ),
