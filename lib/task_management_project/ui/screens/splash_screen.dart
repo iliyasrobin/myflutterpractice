@@ -13,6 +13,9 @@ class _SplashScreenState extends State<SplashScreen> {
       appBar: AppBar(
         title: Text("Task Manager"),
       ),
+      body: Center(
+        child: Text("Hello "),
+      ),
     );
   }
 }
