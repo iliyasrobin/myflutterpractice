@@ -15,6 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       body: Center(
         child: Text("Hello "),
+        //updating
       ),
     );
   }
