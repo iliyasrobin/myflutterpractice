@@ -26,7 +26,7 @@ class buildButton extends StatelessWidget {
               backgroundColor: color ?? Colors.grey,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
             ),
-            onPressed: onCLick, child: Text(text,style: TextStyle(fontSize: 24, color: Colors.white),
+            onPressed: onCLick, child: Text(text,style: TextStyle(fontSize: 25, color: Colors.white),
         )
         ),
       ),
