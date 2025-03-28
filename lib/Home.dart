@@ -11,6 +11,7 @@ class _HomeState extends State<Home> {
   List<String> _task = [];
   TextEditingController _taskController = TextEditingController();
 
+//add task
   _addTask() {
     if (_taskController.text.isNotEmpty) {
       setState(() {
