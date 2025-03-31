@@ -21,6 +21,7 @@ class _HomeState extends State<Home> {
     }
   }
 
+//remove task
   _removeTask(int index) {
     setState(() {
       _task.removeAt(index);
