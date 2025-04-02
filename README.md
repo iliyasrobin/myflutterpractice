@@ -6,7 +6,7 @@ practicing with ostad
 
 This project is a starting point for a Flutter application.
 I've stored all the dart codes here during my flutter learning.
-I'm continously updating.
+I'm continously updating and actively working everyday.
 
 A few resources to get you started if this is your first Flutter project:
 
