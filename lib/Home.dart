@@ -28,6 +28,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+  //remove all
   _removeAll() {
     setState(() {
       _task.clear();
